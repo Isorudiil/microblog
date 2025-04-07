@@ -63,6 +63,7 @@ class UserModelCase(unittest.TestCase):
         u2 = User(username='susan', email='susan@example.com')
         u3 = User(username='mary', email='mary@example.com')
         u4 = User(username='david', email='david@example.com')
+        db.session.add_all([u1, u2, u3, u4])
 
         # create four posts
         now = datetime.now(timezone.utc)
